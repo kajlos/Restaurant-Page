@@ -13,6 +13,12 @@ function firsLoad(){
     const menu= document.createElement('button');
     const contact = document.createElement('button');
     const headerLinks = document.createElement('div');
+    const gitImage = new Image;
+    const link = document.createElement('a');
+    gitImage.src = './GitHub-logo.svg';
+    gitImage.classList.add('git');
+    link.href='https://github.com/kajlos';
+    link.appendChild(gitImage);
     home.textContent='Home';
     home.onclick= homeButton;
     menu.textContent='Menu';
@@ -23,7 +29,7 @@ function firsLoad(){
     footerText.textContent = 'Created by kajlos';
     headerText.textContent = 'Restaurant';
     header.append(headerText, headerLinks);
-    footer.append(footerText);
+    footer.append(footerText, link);
     body.insertBefore(header, body.firstChild);
     body.append(footer);
     homeButton();
